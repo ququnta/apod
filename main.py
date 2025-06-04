@@ -1,9 +1,8 @@
-from PyQt5.Qt import QTranslator, QLocale, QLibraryInfo
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
-from PyQt5.QtWidgets import * 
-from PyQt5 import QtGui, uic
-from PyQt5.QtWebEngineWidgets import *
+from PyQt6.QtCore import *
+from PyQt6.QtGui import *
+from PyQt6.QtWidgets import *
+from PyQt6 import QtGui, uic
+from PyQt6.QtWebEngineWidgets import *
 import webbrowser, requests, json, os, sys
 path = os.path.dirname(os.path.realpath(__file__))
 class Ui(QMainWindow):
@@ -67,4 +66,4 @@ translator = QTranslator(app)
 translator.load(path+'/qtbase_ru.qm')
 app.installTranslator(translator)
 window.search()
-app.exec_()
+app.exec()
